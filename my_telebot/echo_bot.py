@@ -8,8 +8,8 @@ def get_token(path_to_token):
     return my_env_variables['TOKEN']
 
 
-TOKEN = get_token(PATH_TO_TOKEN)
-bot = telebot.TeleBot("TOKEN")
+token = get_token(PATH_TO_TOKEN)
+bot = telebot.TeleBot(token = token)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
